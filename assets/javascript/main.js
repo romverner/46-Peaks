@@ -329,6 +329,7 @@ var weatherURL = "https://api.darksky.net/forecast/303db51ff9b966556106c97e567c4
 $.ajax({
     url: weatherURL,
     method: "GET"
-  }).then(function(response) {
+    }).then(function(response) {
+    $("#weather-summary").text(response.daily.summary);
     console.log(response);
 });
