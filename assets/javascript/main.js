@@ -347,6 +347,12 @@ $.ajax({
         $("#icon1").html("<img src="
         + iconCheck(response.daily.icon)
         + " alt=" + response.daily.icon + ">");
+
+        // The rest can be changed into for-loop
+        $("#icon2").html("<img src="
+        + iconCheck(response.daily.data[0])
+        + " alt=" + response.daily.data[0] + ">");
+
         $("#weather-summary").text(response.daily.summary);
         console.log(response);
 });
