@@ -176,129 +176,159 @@ var peaks = {
         url: "https://en.wikipedia.org/wiki/Mount_Marshall_(New_York)"
     },
     25: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Allen Mountain',
+        height: 4340,
+        rank: 26,
+        coordinates: [44.070833, -73.939722],
+        url: "https://en.wikipedia.org/wiki/Allen_Mountain_(New_York)"
     },
     26: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Big Slide Mountain',
+        height: 4240,
+        rank: 27,
+        coordinates: [44.182272, -73.87042],
+        url: "https://en.wikipedia.org/wiki/Big_Slide_Mountain_(New_York)"
     },
     27: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Esther Mountain',
+        height: 4240,
+        rank: 28,
+        coordinates: [44.386992, -73.889867],
+        url: "https://en.wikipedia.org/wiki/Esther_Mountain"
     },
     28: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Upper Wolfjaw Mountain',
+        height: 4185,
+        rank: 29,
+        coordinates: [44.1405, -73.845333],
+        url: "https://en.wikipedia.org/wiki/Upper_Wolfjaw_Mountain"
     },
     29: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Lower Wolfjaw Mountain',
+        height: 4175,
+        rank: 30,
+        coordinates: [44.148385, -73.83264],
+        url: "https://en.wikipedia.org/wiki/Lower_Wolfjaw_Mountain"
     },
     30: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Street Mountain',
+        height: 4166,
+        rank: 31,
+        coordinates: [44.179333, -74.027167],
+        url: "https://en.wikipedia.org/wiki/Street_Mountain_(New_York)"
     },
     31: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Phelps Mountain',
+        height: 4161,
+        rank: 32,
+        coordinates: [44.157, -73.9215],
+        url: "https://en.wikipedia.org/wiki/Phelps_Mountain_(New_York)"
     },
     32: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Donaldson Mountain',
+        height: 4140,
+        rank: 33,
+        coordinates: [44.153947, -74.210991],
+        url: "https://en.wikipedia.org/wiki/Donaldson_Mountain"
     },
     33: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Seymour Mountain',
+        height: 4120,
+        rank: 34,
+        coordinates: [44.158167, -74.172667],
+        url: "https://en.wikipedia.org/wiki/Seymour_Mountain_(Franklin_County,_New_York)"
     },
     34: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Sawteeth',
+        height: 4100,
+        rank: 35,
+        coordinates: [44.113333, -73.850667],
+        url: "https://en.wikipedia.org/wiki/Sawteeth_(New_York)"
     },
     35: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Cascade Mountain',
+        height: 4098,
+        rank: 36,
+        coordinates: [44.218611, -73.860556],
+        url: "https://en.wikipedia.org/wiki/Cascade_Mountain_(New_York)"
     },
     36: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'South Dix',
+        height: 4060,
+        rank: 37,
+        coordinates: [44.060054, -73.774301],
+        url: "https://en.wikipedia.org/wiki/South_Dix"
     },
     37: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Porter Mountain',
+        height: 4059,
+        rank: 38,
+        coordinates: [44.215278, -73.843611],
+        url: "https://en.wikipedia.org/wiki/Porter_Mountain"
     },
     38: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Mount Colvin',
+        height: 4057,
+        rank: 39,
+        coordinates: [44.093889, -73.834444],
+        url: "https://en.wikipedia.org/wiki/Mount_Colvin"
     },
     39: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Mount Emmons',
+        height: 4040,
+        rank: 40,
+        coordinates: [44.14367, -74.214046],
+        url: "https://en.wikipedia.org/wiki/Mount_Emmons_(New_York)"
     },
     40: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Dial Mountain',
+        height: 4020,
+        rank: 41,
+        coordinates: [44.105886, -73.79597],
+        url: "https://en.wikipedia.org/wiki/Dial_Mountain"
     },
     41: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Grace Peak',
+        height: 4012,
+        rank: 42,
+        coordinates: [44.065331, -73.757356],
+        url: "https://en.wikipedia.org/wiki/Grace_Peak"
     },
     42: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Blake Peak',
+        height: 3960,
+        rank: 43,
+        coordinates: [44.081443, -73.844583],
+        url: "https://en.wikipedia.org/wiki/Blake_Peak"
     },
     43: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Cliff Mountain',
+        height: 3960,
+        rank: 44,
+        coordinates: [44.10311, -73.975145],
+        url: "https://en.wikipedia.org/wiki/Cliff_Mountain_(New_York)"
     },
     44: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Nye Mountain',
+        height: 3895,
+        rank: 45,
+        coordinates: [44.18726, -74.02382],
+        url: "https://en.wikipedia.org/wiki/Nye_Mountain"
     },
     45: {
-        name: ,
-        height: ,
-        rank: ,
-        coordinates: []
+        name: 'Couchsachraga Peak',
+        height: 3820,
+        rank: 46,
+        coordinates: [44.095615, -74.160154],
+        url: "https://en.wikipedia.org/wiki/Couchsachraga_Peak"
     }
 };
+
+var weatherURL = "https://api.darksky.net/forecast/303db51ff9b966556106c97e567c4dfe/44.1125,-73.923889";
+
+$.ajax({
+    url: weatherURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+});
