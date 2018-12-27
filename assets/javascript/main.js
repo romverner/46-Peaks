@@ -331,16 +331,18 @@ $.ajax({
     method: "GET"
     }).then(function(response) {
 
+        /* To account for future API updates, checks for icon-value
+           and sets default if not found */
         var iconCheck = function(input) {
             var localArray = ['clear-day', 'clear-night', 'rain',
             'snow', 'sleet', 'wind', 'fog', 'cloudy',
             'partly-cloudy-day', 'partly-cloudy-night'];
 
             if (localArray.includes(input)) {
-                return ("assets/images/" + input + ".png")
+                return ("assets/images/weather/" + input.trim() + ".png")
             }
             else {
-                return "assets/images/default.png";
+                return "assets/images/weather/default.png";
             };
         };
 

@@ -2,6 +2,10 @@
     font-family: 'PT Serif', serif;
 }
 
+body {
+    background-image: url("../images/cartographer/cartographer.png");
+}
+
 .weather-sum {
     font-weight: bold !important;
 }
