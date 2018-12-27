@@ -330,6 +330,23 @@ $.ajax({
     url: weatherURL,
     method: "GET"
     }).then(function(response) {
-    $("#weather-summary").text(response.daily.summary);
-    console.log(response);
+
+        var iconCheck = function(input) {
+            var localArray = ['clear-day', 'clear-night', 'rain',
+            'snow', 'sleet', 'wind', 'fog', 'cloudy',
+            'partly-cloudy-day', 'partly-cloudy-night'];
+
+            if (localArray.includes(input)) {
+                return ("assets/images/" + input + ".png")
+            }
+            else {
+                return "assets/images/default.png";
+            };
+        };
+
+        $("#icon1").html("<img src="
+        + iconCheck(response.daily.icon)
+        + " alt=" + response.daily.icon + ">");
+        $("#weather-summary").text(response.daily.summary);
+        console.log(response);
 });

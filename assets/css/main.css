@@ -1,5 +1,9 @@
-h1, h4 {
+* {
     font-family: 'PT Serif', serif;
+}
+
+.weather-sum {
+    font-weight: bold !important;
 }
 
 #head-title {
