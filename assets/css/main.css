@@ -1,0 +1,9 @@
+h1 {
+    font-family: 'PT Serif', serif;
+}
+
+#head-title {
+    color: black; /* Text color will need to be changed for header */
+    background: solid;
+    background-color: white; /* Background color will need to be changed for header along with OPACITY */
+}
