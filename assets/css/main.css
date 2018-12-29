@@ -24,3 +24,7 @@ body {
     height: 400px !important;
     overflow: auto !important;
 }
+
+tr:hover {
+    background-color: lightgray;
+ }

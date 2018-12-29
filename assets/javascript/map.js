@@ -355,9 +355,13 @@ $(document).ready(function() {
 
         var table = document.getElementById("mountain-table");
         var row = table.insertRow();
-        var att = document.createAttribute("id");
-        
-        att.value = peaks[key].name.replace(/ /g,'').toLowerCase();
+        var att = document.createAttribute("lat");
+        var att2 = document.createAttribute("lng");
+        var att3 = document.createAttribute("class");
+
+        att.value  = peaks[key].coordinates[0];
+        att2.value = peaks[key].coordinates[1];
+        att3.value = "cell-two";
 
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
@@ -365,9 +369,21 @@ $(document).ready(function() {
 
         cell1.innerHTML = peaks[key].rank;
         cell2.innerHTML = peaks[key].name;
+        cell2.setAttributeNode(att3);
+        cell2.setAttributeNode(att2);
         cell2.setAttributeNode(att);
         cell3.innerHTML = peaks[key].height;
         
     });
 
 });
+
+$(document).on("click", ".cell-two", function(event) {
+    event.preventDefault();
+
+    var lat = this.getAttribute("lat");
+    var lng = this.getAttribute("lng");
+
+
+    mymap.panTo(new L.LatLng(lat, lng));
+})
