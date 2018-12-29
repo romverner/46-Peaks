@@ -15,3 +15,7 @@ body {
     background: solid;
     background-color: white; /* Background color will need to be changed for header along with OPACITY */
 }
+
+#mapid { 
+    height: 400px; 
+}

@@ -1,4 +1,5 @@
-// Setting global variables
+var mymap = L.map('mapid').setView([44.112734, -73.923726], 13);
+
 var peaks = {
     0: {
         name: 'Mount Marcy',
@@ -324,48 +325,24 @@ var peaks = {
     }
 };
 
-var weatherURL = "https://api.darksky.net/forecast/303db51ff9b966556106c97e567c4dfe/44.1125,-73.923889";
+$(document).ready(function() {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mymap);
 
-// Working module, just update to fill in remaining weather days
-$.ajax({
-    url: weatherURL,
-    method: "GET"
-    }).then(function(response) {
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1Ijoicm9tdmVybmVyIiwiYSI6ImNqcTlweWNhbjNlaHE0M3VseXpmOTBwemwifQ.xhrx3dgm5fmjIPQYvIvEkQ'
+}).addTo(mymap);
 
-        /* To account for future API updates, checks for icon-value
-           and sets default if not found. As recommended by Dark Sky. */
-        var iconCheck = function(input) {
-            var localArray = ['clear-day', 'clear-night', 'rain',
-            'snow', 'sleet', 'wind', 'fog', 'cloudy',
-            'partly-cloudy-day', 'partly-cloudy-night'];
+var drawMarker = function(coord, name, height) {
+    L.marker(coord).addTo(mymap).bindPopup(name + ": " + height + " ft tall").openPopup();
+};
 
-            if (localArray.includes(input)) {
-                return ("assets/images/weather/" + input.trim() + ".png")
-            }
-            else {
-                return "assets/images/weather/default.png";
-            };
-        };
-
-        var dateWrite = function(input) {
-            var localDate = moment.unix(input).format("MM/DD");
-            return localDate;
-        };
-
-        $("#icon1").html("<img src="
-        + iconCheck(response.daily.data[0].icon)
-        + " alt=" + response.daily.icon + ">");
-
-        $("#day-one").text(dateWrite(response.daily.data[0].time)
-            + ": " + response.daily.data[0].summary);
-
-
-        // The rest can be changed into for-loop
-        $("#icon2").html("<img src="
-        + iconCheck(response.daily.data[0].icon)
-        + " alt=" + response.daily.data[0].icon + ">");
-
-        $("#weather-summary").text(response.daily.summary);
-        console.log(response);
+// Drawing peak markers to the map, 46 is a constant here
+Object.keys(peaks).forEach(function(key) {
+    drawMarker(peaks[key].coordinates, peaks[key].name, peaks[key].height);
+  });
 });
-
