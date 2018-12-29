@@ -19,3 +19,8 @@ body {
 #mapid { 
     height: 400px; 
 }
+
+#mountain-table-div {
+    height: 400px !important;
+    overflow: auto !important;
+}

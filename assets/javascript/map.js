@@ -1,3 +1,4 @@
+// Sets the maps default view to ADK Park
 var mymap = L.map('mapid').setView([44.112734, -73.923726], 13);
 
 var peaks = {
@@ -326,23 +327,47 @@ var peaks = {
 };
 
 $(document).ready(function() {
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mymap);
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1Ijoicm9tdmVybmVyIiwiYSI6ImNqcTlweWNhbjNlaHE0M3VseXpmOTBwemwifQ.xhrx3dgm5fmjIPQYvIvEkQ'
-}).addTo(mymap);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1Ijoicm9tdmVybmVyIiwiYSI6ImNqcTlweWNhbjNlaHE0M3VseXpmOTBwemwifQ.xhrx3dgm5fmjIPQYvIvEkQ'
+    }).addTo(mymap);
 
-var drawMarker = function(coord, name, height) {
-    L.marker(coord).addTo(mymap).bindPopup(name + ": " + height + " ft tall").openPopup();
-};
+    var drawMarker = function(coord, name, link, height) {
+        L.marker(coord).addTo(mymap).bindPopup(
+            "<a href=" + link + " target='_blank'>"
+            + name + "</a>: "
+            + height + " ft tall").openPopup();
+    };
 
-// Drawing peak markers to the map, 46 is a constant here
-Object.keys(peaks).forEach(function(key) {
-    drawMarker(peaks[key].coordinates, peaks[key].name, peaks[key].height);
-  });
+    // Drawing peak markers to the map with peak info in table
+    Object.keys(peaks).forEach(function(key) {
+        drawMarker(
+            peaks[key].coordinates,
+            peaks[key].name,
+            peaks[key].url,
+            peaks[key].height);
+
+        var table = document.getElementById("mountain-table");
+        var row = table.insertRow();
+        var att = document.createAttribute("id");
+        
+        att.value = peaks[key].name.replace(/ /g,'').toLowerCase();
+
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+
+        cell1.innerHTML = peaks[key].rank;
+        cell2.innerHTML = peaks[key].name;
+        cell2.setAttributeNode(att);
+        cell3.innerHTML = peaks[key].height;
+        
+    });
+
 });
