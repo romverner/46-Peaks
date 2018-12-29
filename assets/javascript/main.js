@@ -352,7 +352,7 @@ $.ajax({
             return localDate;
         };
 
-        $("#icon1").html("<img src="
+        $("#icon1").html("<img class='img-fluid' src="
         + iconCheck(response.daily.data[0].icon)
         + " alt=" + response.daily.icon + ">");
 
@@ -361,7 +361,7 @@ $.ajax({
 
 
         // The rest can be changed into for-loop
-        $("#icon2").html("<img src="
+        $("#icon2").html("<img class='img-fluid' src="
         + iconCheck(response.daily.data[0].icon)
         + " alt=" + response.daily.data[0].icon + ">");
 

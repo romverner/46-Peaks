@@ -2,6 +2,10 @@
     font-family: 'PT Serif', serif;
 }
 
+h1 {
+    text-align: center;
+}
+
 body {
     background-image: url("../images/cartographer/cartographer.png");
 }
@@ -12,8 +16,15 @@ body {
 
 #head-title {
     color: black; /* Text color will need to be changed for header */
-    background: solid;
-    background-color: white; /* Background color will need to be changed for header along with OPACITY */
+    background-image: url("../images/cartographer/topo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#head-back {
+    background-color: white;
+    opacity: 0.925;
 }
 
 #mapid { 
