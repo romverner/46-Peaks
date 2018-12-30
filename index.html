@@ -18,6 +18,12 @@
    crossorigin=""></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_ERzl6WhtfmRe34it4avnL");
+        })();
+    </script>
     <script src="assets/javascript/main.js"></script>
 </head>
 
@@ -64,16 +70,22 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <p>
-                    The Adirondack region has a lot of hiking to offer
+                    The Adirondack region has a lot of hiking on offer for
                     any outdoor enthusiast! This website was created to
                     help you plan your trip. Simply click on a peak name
-                    and the map will show you the peak. Zoom in to view
-                    the locations of the trails and trailheads!
+                    and the map will show you the peak's location. 
+                    Zoom in to view the locations of the trails
+                    and trailheads!
                 </p>      
                 <p>
                     Clicking on a map marker will bring up the peaks
                     name. Clicking on the marker name will bring you to the
-                    wiki-page for that peak!
+                    wiki-page for that peak! For more information, please
+                    visit the ADK webpage 
+                    <a href="https://www.adk.org/play/hiking-information/hiking-in-the-adirondacks/" target="_blank">
+                    here</a>. Be sure to read the rules of hiking
+                    in the region and always make sure to check the most
+                    up-to-date conditions on the day of your hike!
                 </p>
             </div>
             <div class="col-sm-2"></div>
@@ -171,6 +183,66 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <div class="row border-top border-bottom mt-3">
+                    <div class="col-sm-12 text-center mt-2 mb-1">
+                        <h4>Journal Your Hikes</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <p>
+                    Below you will find a form to help you keep track of
+                    the hikes you've completed! You can send your entries
+                    to family, friends, or yourself if you'd like. The 
+                    email entry field is entirely optional and can support
+                    multiple email addresses!
+                </p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
+            <form>
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1">Recipient Email Address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email address(es)">
+                    <small id="emailHelp" class="form-text text-muted">NOTE: Please separate multiple emails with a comma.</small>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1">Subject</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: Another One Down!">
+                </div>
+                <form class="form-inline">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Mountain Completed:</label>
+                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                        <option selected>Choose...</option>
+                        <option value="1">1. Mount Marcy</option>
+                        <option value="2">2. Algonquin Peak</option>
+                        <option value="3">3. Mount Haystack</option>
+                </select>
+                <!-- Add ability to enter date completed, length of hike, and 1-5 rating of hike. -->
+                <div class="form-group mt-3">
+                    <label for="exampleTextarea">How was your hike?</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+                </div>
+            </form>
+
+            <!-- <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <label>Name</label>
+                <input type="text" name="user_name">
+                <br>
+                <label>Email</label>
+                <input type="email" name="user_email">
+                <label>Message</label>
+                <textarea name="contact"></textarea>
+                <input type="submit" value="Send">
+            </form> -->
     </div>
 
     <script src="assets/javascript/map.js"></script>

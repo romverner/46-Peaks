@@ -326,7 +326,7 @@ var peaks = {
 
 var weatherURL = "https://api.darksky.net/forecast/303db51ff9b966556106c97e567c4dfe/44.1125,-73.923889";
 
-// Working module, just update to fill in remaining weather days
+// Working module
 $.ajax({
     url: weatherURL,
     method: "GET"
