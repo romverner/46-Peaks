@@ -352,18 +352,48 @@ $.ajax({
             return localDate;
         };
 
+        // If enough time, reduce repetetive code
         $("#icon1").html("<img class='img-fluid' src="
-        + iconCheck(response.daily.data[0].icon)
-        + " alt=" + response.daily.icon + ">");
+            + iconCheck(response.daily.data[0].icon)
+            + " alt=" + response.daily.data[0].icon + ">");
 
         $("#day-one").text(dateWrite(response.daily.data[0].time)
             + ": " + response.daily.data[0].summary);
 
-
-        // The rest can be changed into for-loop
         $("#icon2").html("<img class='img-fluid' src="
-        + iconCheck(response.daily.data[0].icon)
-        + " alt=" + response.daily.data[0].icon + ">");
+            + iconCheck(response.daily.data[1].icon)
+            + " alt=" + response.daily.data[1].icon + ">");
+
+        $("#day-two").text(dateWrite(response.daily.data[1].time)
+            + ": " + response.daily.data[1].summary);
+
+        $("#icon3").html("<img class='img-fluid' src="
+            + iconCheck(response.daily.data[2].icon)
+            + " alt=" + response.daily.data[2].icon + ">");
+
+        $("#day-three").text(dateWrite(response.daily.data[2].time)
+            + ": " + response.daily.data[2].summary);
+
+        $("#icon4").html("<img class='img-fluid' src="
+            + iconCheck(response.daily.data[3].icon)
+            + " alt=" + response.daily.data[3].icon + ">");
+
+        $("#day-four").text(dateWrite(response.daily.data[3].time)
+            + ": " + response.daily.data[3].summary);
+
+        $("#icon5").html("<img class='img-fluid' src="
+            + iconCheck(response.daily.data[4].icon)
+            + " alt=" + response.daily.data[4].icon + ">");
+
+        $("#day-five").text(dateWrite(response.daily.data[4].time)
+            + ": " + response.daily.data[4].summary);
+
+        $("#icon6").html("<img class='img-fluid' src="
+            + iconCheck(response.daily.data[5].icon)
+            + " alt=" + response.daily.data[5].icon + ">");
+
+        $("#day-six").text(dateWrite(response.daily.data[5].time)
+            + ": " + response.daily.data[5].summary);
 
         $("#weather-summary").text(response.daily.summary);
         console.log(response);
