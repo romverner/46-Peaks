@@ -14,6 +14,10 @@ body {
     font-weight: bold !important;
 }
 
+.head-gray {
+    background-color: #e2e2e2;
+}
+
 #head-title {
     color: black; /* Text color will need to be changed for header */
     background-image: url("../images/cartographer/topo.png");
@@ -31,7 +35,7 @@ body {
     height: 400px; 
 }
 
-#mountain-table-div {
+#mountain-table-div, #guestEntry {
     height: 400px !important;
     overflow: auto !important;
 }
