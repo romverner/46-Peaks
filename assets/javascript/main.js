@@ -22,34 +22,6 @@ var postDuration = "";
 var postPeaks = "";
 var postBody = "";
 
-// Listens for submit-button click and submits data
-// $(document).on("click", "#submit", function(event) {
-//     event.preventDefault();
-
-//     username = $("#usernameID").val().trim();
-//     postTitle = $("#titlePost").val().trim();
-//     postDate = $("#postDateComplete").val().trim();
-//     postDuration = $("#hikeDuration").val().trim();
-//     postPeaks = $("#peaksClimbed").val().trim();
-//     postBody = $("#hikeDescription").val().trim();
-
-//     var post = {
-//         username: username, 
-//         postTitle: postTitle,
-//         postDate: postDate,
-//         postDuration: postDuration,
-//         postPeaks: postPeaks,
-//         postBody: postBody
-//     };
-
-//     database.ref().push({post});
-
-//     // if($("input[id=emailCheck]").is(":checked")) {
-//     //     event.preventDefault();
-//     //     emailjs.sendForm('gmail', 'hiking_template', this);
-//     // };
-// });
-
 // Listens and updates page according to any changes to Firebase
 database.ref().on("child_added", function(snapshot) {
     var sv = snapshot.val();
@@ -60,13 +32,14 @@ database.ref().on("child_added", function(snapshot) {
     console.log("Errors handled: " + errorObject.code);
 });
 
-// Working with email.js to send emails from 46.peaks.expedition@gmail.com
+// Working with email.js to send emails from 46.peaks.expedition@gmail.com & update/send to Firebase
 window.onload = function() {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
-        emailjs.sendForm('gmail', 'hiking_template', this);
 
-        event.preventDefault();
+        if($("input[id=emailCheck]").is(":checked")) {
+            emailjs.sendForm('gmail', 'hiking_template', this);
+        };
 
         username = $("#usernameID").val().trim();
         postTitle = $("#titlePost").val().trim();
