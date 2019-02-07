@@ -1,4 +1,4 @@
-# project-one
+# 46 Peaks - A Planning & Journaling Website
 
 ### Resources
 GeoHack - Coordinates
