@@ -335,7 +335,7 @@ $(document).ready(function() {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
         id: 'mapbox.streets',
-        accessToken: 'pk.eyJ1Ijoicm9tdmVybmVyIiwiYSI6ImNqcTlweWNhbjNlaHE0M3VseXpmOTBwemwifQ.xhrx3dgm5fmjIPQYvIvEkQ'
+        accessToken: ''
     }).addTo(mymap);
 
     var drawMarker = function(coord, name, link, height) {

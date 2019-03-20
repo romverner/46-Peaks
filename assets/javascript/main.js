@@ -1,14 +1,14 @@
 // Global variables and initializing Firebase
 
-var weatherURL = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/303db51ff9b966556106c97e567c4dfe/44.1125,-73.923889";
+var weatherURL = "";
 
 var config = {
-    apiKey: "AIzaSyCmqFvLXBLvmzLdfIiJpRVxdtNtR4LAlSU",
+    apiKey: "",
     authDomain: "journal-tracker.firebaseapp.com",
     databaseURL: "https://journal-tracker.firebaseio.com",
     projectId: "journal-tracker",
     storageBucket: "journal-tracker.appspot.com",
-    messagingSenderId: "607808148"
+    messagingSenderId: ""
 };
 
 firebase.initializeApp(config);
